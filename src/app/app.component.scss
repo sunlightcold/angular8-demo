@@ -1,0 +1,12 @@
+.container {
+  padding: 10px;
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      padding-right: 10px;
+    }
+  }
+}
