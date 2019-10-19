@@ -4,7 +4,6 @@ import { Directive, ViewContainerRef } from '@angular/core';
   selector: '[appAd]'
 })
 export class AdDirective {
-
   constructor(public viewContainerRef: ViewContainerRef) { }
 
 }

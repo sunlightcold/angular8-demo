@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, OnDestroy, Output } from '@angular/core';
-import { AdDirective } from '../ad.directive';
+import { AdDirective } from '../directive/ad.directive';
 import { AdItem } from '../model/ad.model';
 import { OneBannerComponent } from '../one-banner/one-banner.component';
 import { TwoBannerComponent } from '../two-banner/two-banner.component';
@@ -48,4 +48,6 @@ export class AdBannerComponent implements OnInit, OnDestroy {
       console.log(res);
     });
   }
+
+  onClick() {}
 }

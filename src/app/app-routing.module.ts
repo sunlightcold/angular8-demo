@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { Renderer2Component } from './components/renderer2/renderer2.component';
 import { SanitizerComponent } from './components/sanitizer/sanitizer.component';
 import { InputComponent } from './components/input/input.component';
-import { AdBannerComponent } from './components/dynamic-component/directive/ad-banner/ad-banner.component';
+import { AdBannerComponent } from './components/dynamic-component/ad-banner/ad-banner.component';
 import { FormComponent } from './components/form/form.component';
+import { ScrollComponent } from './components/scroll/scroll.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'form',
     component: FormComponent
+  },
+  {
+    path: 'scroll',
+    component: ScrollComponent
   }
 ];
 
