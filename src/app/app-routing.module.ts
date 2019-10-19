@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { Renderer2Component } from './components/renderer2/renderer2.component';
 import { SanitizerComponent } from './components/sanitizer/sanitizer.component';
 import { InputComponent } from './components/input/input.component';
+import { AdBannerComponent } from './components/dynamic-component/directive/ad-banner/ad-banner.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'input',
     component: InputComponent
+  },
+  {
+    path: 'dynamic/component',
+    component: AdBannerComponent
   }
 ];
 

@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
 import { Renderer2Component } from './components/renderer2/renderer2.component';
 import { SanitizerComponent } from './components/sanitizer/sanitizer.component';
+import { AdDirective } from './components/dynamic-component/directive/ad.directive';
+import { AdBannerComponent } from './components/dynamic-component/directive/ad-banner/ad-banner.component';
+import { OneBannerComponent } from './components/dynamic-component/directive/one-banner/one-banner.component';
+import { TwoBannerComponent } from './components/dynamic-component/directive/two-banner/two-banner.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +17,14 @@ import { SanitizerComponent } from './components/sanitizer/sanitizer.component';
     InputComponent,
     Renderer2Component,
     SanitizerComponent,
+    AdDirective,
+    AdBannerComponent,
+    OneBannerComponent,
+    TwoBannerComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [OneBannerComponent, TwoBannerComponent]
 })
-export class AppModule { }
+export class AppModule {}
