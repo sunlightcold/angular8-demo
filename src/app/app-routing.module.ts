@@ -4,6 +4,7 @@ import { Renderer2Component } from './components/renderer2/renderer2.component';
 import { SanitizerComponent } from './components/sanitizer/sanitizer.component';
 import { InputComponent } from './components/input/input.component';
 import { AdBannerComponent } from './components/dynamic-component/directive/ad-banner/ad-banner.component';
+import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'dynamic/component',
     component: AdBannerComponent
+  },
+  {
+    path: 'form',
+    component: FormComponent
   }
 ];
 

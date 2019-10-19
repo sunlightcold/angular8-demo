@@ -10,6 +10,9 @@ import { AdDirective } from './components/dynamic-component/directive/ad.directi
 import { AdBannerComponent } from './components/dynamic-component/directive/ad-banner/ad-banner.component';
 import { OneBannerComponent } from './components/dynamic-component/directive/one-banner/one-banner.component';
 import { TwoBannerComponent } from './components/dynamic-component/directive/two-banner/two-banner.component';
+import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ScrollComponent } from './components/scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { TwoBannerComponent } from './components/dynamic-component/directive/two
     AdDirective,
     AdBannerComponent,
     OneBannerComponent,
-    TwoBannerComponent
+    TwoBannerComponent,
+    FormComponent,
+    ScrollComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [OneBannerComponent, TwoBannerComponent]
