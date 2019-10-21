@@ -6,6 +6,7 @@ import { InputComponent } from './components/input/input.component';
 import { AdBannerComponent } from './components/dynamic-component/ad-banner/ad-banner.component';
 import { FormComponent } from './components/form/form.component';
 import { ScrollComponent } from './components/scroll/scroll.component';
+import { CopyComponent } from './components/copy/copy.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'scroll',
     component: ScrollComponent
+  },
+  {
+    path: 'copy',
+    component: CopyComponent
   }
 ];
 
