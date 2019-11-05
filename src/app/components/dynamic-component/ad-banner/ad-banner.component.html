@@ -1,3 +1,4 @@
 <p>AdBanner</p>
-<ng-template appAd></ng-template>
+<ng-template #template appAd [adItems]="adItems"></ng-template>
+<!-- <ng-template #template></ng-template> -->
 <button (click)="onClick($event)">销毁</button>

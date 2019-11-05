@@ -27,7 +27,7 @@ export class RxjsComponent implements OnInit {
     // this.testMerage();
     // this.testDelay();
     // this.testDebounceTime();
-    this.testThrottleTime();
+    // this.testThrottleTime();
   }
 
   // 测试Observable，subscribe为同步执行
