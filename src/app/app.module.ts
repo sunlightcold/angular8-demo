@@ -15,6 +15,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ScrollComponent } from './components/scroll/scroll.component';
 import { CopyComponent } from './components/copy/copy.component';
 import { CopyDirective } from './directives/copy.directive';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CopyDirective } from './directives/copy.directive';
     FormComponent,
     ScrollComponent,
     CopyComponent,
-    CopyDirective
+    CopyDirective,
+    RxjsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],

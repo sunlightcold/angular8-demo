@@ -7,6 +7,7 @@ import { AdBannerComponent } from './components/dynamic-component/ad-banner/ad-b
 import { FormComponent } from './components/form/form.component';
 import { ScrollComponent } from './components/scroll/scroll.component';
 import { CopyComponent } from './components/copy/copy.component';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'copy',
     component: CopyComponent
+  },
+  {
+    path: 'rxjs',
+    component: RxjsComponent
   }
 ];
 
