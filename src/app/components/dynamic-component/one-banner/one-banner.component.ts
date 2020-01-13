@@ -17,6 +17,6 @@ export class OneBannerComponent implements OnInit {
   ngOnInit() {}
 
   onPress($event) {
-    this.press.emit('test');
+    this.press.emit('one-banner');
   }
 }

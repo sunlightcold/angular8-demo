@@ -1,0 +1,7 @@
+<aside class="aside-container">
+  <ul>
+    <li *ngFor="let aside of asideList">
+      <a (click)="jumpRouter(aside)" >{{ aside.title }}</a>
+    </li>
+  </ul>
+</aside>

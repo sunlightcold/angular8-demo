@@ -1,0 +1,8 @@
+<input #input type="text" [formControl]="formControl" (keydown.enter)="onEnterPress()">
+<ul>
+  <li *ngFor="let todo of todoList">
+    <p>
+      {{ todo.title }}: {{ todo.description }}
+    </p>
+  </li>
+</ul>

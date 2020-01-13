@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, OnDestroy, Output, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, OnDestroy, ViewContainerRef } from '@angular/core';
 import { AdDirective } from '../directive/ad.directive';
 import { AdItem } from '../model/ad.model';
 import { OneBannerComponent } from '../one-banner/one-banner.component';
@@ -17,7 +17,8 @@ export class AdBannerComponent implements OnInit, OnDestroy {
   template: ViewContainerRef;
 
   @Input()
-  adItems: AdItem[] = [new AdItem(OneBannerComponent, { abc: 'abc' }), new AdItem(TwoBannerComponent, {})];
+  // tslint:disable-next-line: max-line-length
+  adItems: AdItem<OneBannerComponent | TwoBannerComponent>[] = [new AdItem(OneBannerComponent, { abc: 'abc' }), new AdItem(TwoBannerComponent, {})];
 
   private currentIndex = -1;
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-two-banner',
@@ -9,13 +9,16 @@ export class TwoBannerComponent implements OnInit {
   @Output()
   press = new EventEmitter();
 
+  @Input()
+  data: any;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onPress($event) {
-    this.press.emit('abc');
+    this.press.emit('two-banner');
   }
 
 }

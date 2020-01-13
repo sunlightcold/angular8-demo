@@ -27,3 +27,11 @@
   border-radius: 1em;
   background-color: rgba(50, 50, 50, 0.1);
 }
+
+span {
+  display: inline-block;
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
