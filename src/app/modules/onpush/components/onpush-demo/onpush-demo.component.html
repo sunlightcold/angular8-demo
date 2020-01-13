@@ -1,1 +1,5 @@
-<app-todo-list></app-todo-list>
+<app-enter-todo (enterPress)="onEnterPress($event)"></app-enter-todo>
+<app-todo-list [todoList]="todoList"></app-todo-list>
+<button (click)="onButtonPress()">
+  改变todolist引用
+</button>
