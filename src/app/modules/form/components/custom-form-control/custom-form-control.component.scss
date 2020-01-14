@@ -1,36 +1,48 @@
 .stars {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
-	&:hover {
-    .star polygon {
-      fill: #ffd055 !important;
+  .point {
+    color: gray;
+    padding: 5px;
+  }
+
+  &:hover {
+    .star .icon-start {
+      color: #ffd055;
     }
   }
+
   &.disabled:hover {
     cursor: not-allowed;
-    .star  {
-      polygon {
-        fill: #d8d8d8 !important;
+    .star {
+      .icon-start {
+        color: gray;
       }
     }
   }
 
-	.star {
-    float: left;
-    margin: 0px 5px;
+  .star {
+    padding: 5px;
 
-    polygon {
-      fill: #d8d8d8;
+    .icon-start {
+      color: gray;
+      font-size: 25px;
+      line-height: 25px;
     }
 
     &:hover ~ .star {
-      polygon {
-        fill: #d8d8d8 !important;
+      color: gray;
+
+      .icon-start {
+        color: gray;
       }
     }
+
     &.selected {
-      polygon {
-        fill: #ffd055 !important;
+      .icon-start {
+        color: #ffd055;
       }
     }
   }

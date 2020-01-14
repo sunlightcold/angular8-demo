@@ -14,4 +14,9 @@ export class FormDemoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onClick() {
+    this.formGroup.patchValue({ rating: 4 });
+    console.log(this.formGroup.value);
+  }
 }

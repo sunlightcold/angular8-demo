@@ -38,29 +38,41 @@ export class CustomFormControlComponent implements ControlValueAccessor {
   ];
   public disabled: boolean;
   public ratingText: string;
-  public _value: number;
+  public value$: number;
 
   onChanged: any = () => {};
   onTouched: any = () => {};
 
-  writeValue(val) {
-    this._value = val;
+  /**
+   * 初始化 formControl 时调用，设置 formControl 值时调用
+   * @param val control 传入的值
+   */
+  writeValue(val: number) {
+    console.log(val);
+    this.value$ = val;
   }
 
   registerOnChange(fn: any) {
-    this.onChanged = fn;
-  }
-  registerOnTouched(fn: any) {
-    this.onTouched = fn;
+    // console.log(fn);
+    // this.onChanged = fn;
   }
 
+  registerOnTouched(fn: any) {
+    // console.log(fn);
+    // this.onTouched = fn;
+  }
+
+  /**
+   * 当 formControl 初始化时使用了 disabled 的属性时被调用
+   * 当 formControl 的 disabled 状态发生了变化时被调用
+   */
   setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }
 
   setRating(star: any) {
     if (!this.disabled) {
-      this._value = star.stars;
+      this.value$ = star.stars;
       this.ratingText = star.text;
       this.onChanged(star.stars);
       this.onTouched();
