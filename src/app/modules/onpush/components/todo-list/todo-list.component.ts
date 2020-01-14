@@ -15,6 +15,9 @@ export class TodoListComponent implements OnInit {
   @Input()
   todoList: TodoListModel[];
 
+  @Input()
+  num: string;
+
   constructor() {}
 
   ngOnInit() {}

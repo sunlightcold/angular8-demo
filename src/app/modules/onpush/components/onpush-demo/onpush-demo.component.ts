@@ -23,15 +23,19 @@ export class OnpushDemoComponent implements OnInit {
     },
   ];
 
+  // 基本类型
+  num = 100;
+
   constructor(private changeRef: ChangeDetectorRef) {}
 
   ngOnInit() {
     setTimeout(() => {
+      this.num = 1000;
       this.todoList.push({
         title: `任务${this.todoList.length + 1}`,
         description: 'abc',
       });
-      // this.changeRef.markForCheck();
+      this.changeRef.markForCheck();
       console.log('插入数据', this.todoList);
     }, 2000);
     setTimeout(() => {
@@ -40,7 +44,7 @@ export class OnpushDemoComponent implements OnInit {
         description: 'abc',
       });
       // this.changeRef.detectChanges();
-      // this.changeRef.markForCheck();
+      this.changeRef.markForCheck();
       console.log('插入数据', this.todoList);
     }, 4000);
   }

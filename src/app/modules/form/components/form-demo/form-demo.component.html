@@ -1,3 +1,9 @@
-<p>
-  form-demo works!
-</p>
+<form [formGroup]="formGroup">
+  <h1>Rating Demo</h1>
+  <div class="form-group">
+    <label>
+      Rating:
+      <app-custom-form-control formControlName="rating"></app-custom-form-control>
+    </label>
+  </div>
+</form>
