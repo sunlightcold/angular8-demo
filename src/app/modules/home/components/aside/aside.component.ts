@@ -21,6 +21,10 @@ export class AsideComponent implements OnInit {
       title: 'form 表单',
       router: 'form',
     },
+    {
+      title: 'DI 实战',
+      router: 'di',
+    },
   ];
 
   constructor(private activateRoute: ActivatedRoute, private router: Router) {}

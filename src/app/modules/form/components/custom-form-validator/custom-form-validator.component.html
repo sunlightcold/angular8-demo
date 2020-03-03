@@ -1,0 +1,26 @@
+<form [formGroup]="formGroup">
+  <label for="userName">用户名：</label>
+  <input type="text" id="userName" formControlName="userName">
+  <p *ngIf="formGroup.controls.userName.touched && formGroup.controls.userName.invalid">用户名输入错误</p>
+
+  <br>
+  <label for="userPaw">密码</label>
+  <input type="password" id="userPaw" formControlName="userPaw">
+  <p *ngIf="formGroup.controls.userPaw.hasError('maxLength')">最多10位</p>
+  <p *ngIf="formGroup.controls.userPaw.touched && formGroup.controls.userPaw.hasError('required')">必填</p>
+
+  <br>
+  <label for="webUrl">自定义验证1：</label>
+  <input autocomplete="off" type="text" id="webUrl" formControlName="webUrl">
+  <p *ngIf="formGroup.controls.webUrl.touched && formGroup.controls.webUrl.hasError('urlError')">格式错误</p>
+
+  <br>
+  <label for="length">自定义验证2：</label>
+  <input autocomplete="off" type="text" id="length" formControlName="length">
+  <p *ngIf="formGroup.controls.length.touched && formGroup.controls.length.hasError('lenError')">格式错误</p>
+  <p *ngIf="formGroup.controls.length.touched && formGroup.controls.length.hasError('urlError')">url格式错误</p>
+</form>
+
+<button (click)="resetButton()">重置</button>
+<button (click)="getStatus()">状态</button>
+<button *ngIf="formGroup.valid">提交</button>

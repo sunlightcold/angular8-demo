@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../form/form.module').then(module => module.FormModule),
       },
       {
+        path: 'di',
+        loadChildren: () => import('../di/di.module').then(module => module.DIModule),
+      },
+      {
         path: '',
         redirectTo: 'onPush',
         pathMatch: 'full',

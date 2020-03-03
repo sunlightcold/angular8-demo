@@ -44,7 +44,6 @@ export class OnpushDemoComponent implements OnInit {
         description: 'abc',
       });
       // this.changeRef.detectChanges();
-      this.changeRef.markForCheck();
       console.log('插入数据', this.todoList);
     }, 4000);
   }

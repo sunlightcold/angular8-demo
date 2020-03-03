@@ -1,0 +1,8 @@
+<p>
+  parent works!
+</p>
+<div *ngFor="let log of loggerService.getLogs()">
+  <span>{{ log }}</span>
+</div>
+<button (click)="addLog()">add log</button>
+<app-child></app-child>
